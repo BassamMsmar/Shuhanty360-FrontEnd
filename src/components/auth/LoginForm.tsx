@@ -8,26 +8,24 @@ const LoginForm = () => {
     password: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle login logic here
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
-
   return (
     <div className="bg-white rounded-3xl shadow-lg w-full max-w-md p-8 mx-auto" dir="rtl">
       <div className="flex justify-center mb-6">
         <div className="flex items-center space-x-2 space-x-reverse">
           <img 
-            src="/truck-logo.png" 
+            src="/AljeedLogo1.svg" 
             alt="Aljeed Logo" 
-            className="h-12"
+            className="h-25"
           />
         </div>
       </div>
